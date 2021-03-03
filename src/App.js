@@ -41,7 +41,7 @@ const App = () => {
 
   const getEmployeeData = async () => {
     let response = await axios.get(
-      "https://randomuser.me/api/?results=10&nat=us"
+      "https://randomuser.me/api/?results=100&nat=us"
     );
     console.log(response.data.results);
     setEmployeeData(formatTableData(response.data.results));

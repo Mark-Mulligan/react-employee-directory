@@ -14,8 +14,9 @@ function GlobalFilter({ globalFilter, setGlobalFilter }) {
 
   return (
     <div className="search-container">
-      Search:{" "}
       <input
+        className="form-control search-input"
+        placeholder="Type to search directory..."
         value={value || ""}
         onChange={(e) => {
           setValue(e.target.value);
@@ -44,8 +45,8 @@ const Table = ({ columns, data }) => {
         setGlobalFilter={setGlobalFilter}
       />
 
-      <table className="table border" {...getTableProps()}>
-        <thead>
+      <table className="table border table-striped" {...getTableProps()}>
+        <thead className="table-head">
           {headerGroups.map((headerGroup) => (
             <tr {...headerGroup.getHeaderGroupProps()}>
               {headerGroup.headers.map((column) => (
