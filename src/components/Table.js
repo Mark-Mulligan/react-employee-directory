@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import {
   useTable,
-  setGlobalFilter,
   useGlobalFilter,
   useAsyncDebounce,
   useSortBy,
@@ -45,7 +44,7 @@ const Table = ({ columns, data }) => {
         setGlobalFilter={setGlobalFilter}
       />
 
-      <table className="table" {...getTableProps()}>
+      <table className="table border" {...getTableProps()}>
         <thead>
           {headerGroups.map((headerGroup) => (
             <tr {...headerGroup.getHeaderGroupProps()}>
@@ -55,15 +54,17 @@ const Table = ({ columns, data }) => {
                   {...column.getHeaderProps(column.getSortByToggleProps())}
                 >
                   {column.render("Header")}
-                  <i
-                    className={
-                      column.isSorted
-                        ? column.isSortedDesc
-                          ? "fas fa-sort-down"
-                          : "fas fa-sort-up"
-                        : "fas fa-sort"
-                    }
-                  ></i>
+                  {column.id !== "picture" && (
+                    <i
+                      className={
+                        column.isSorted
+                          ? column.isSortedDesc
+                            ? "fas fa-sort-down"
+                            : "fas fa-sort-up"
+                          : "fas fa-sort"
+                      }
+                    ></i>
+                  )}
                 </th>
               ))}
             </tr>
@@ -73,7 +74,7 @@ const Table = ({ columns, data }) => {
           {rows.map((row) => {
             prepareRow(row);
             return (
-              <tr {...row.getRowProps()}>
+              <tr className="table-row" {...row.getRowProps()}>
                 {row.cells.map((cell) => {
                   return (
                     <td {...cell.getCellProps()}>{cell.render("Cell")}</td>

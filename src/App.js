@@ -6,12 +6,11 @@ import "./App.css";
 
 const columns = [
   {
-    Header: "Picture",
+    Header: "",
     Cell: (row) => {
-      console.log(row.cell.value);
       return (
-        <div>
-          <img height={50} src={row.cell.value} />
+        <div key={row.cell.value}>
+          <img height={90} src={row.cell.value} />
         </div>
       );
     },
@@ -32,7 +31,7 @@ const columns = [
     accessor: "email",
   },
   {
-    Header: "Cell Number",
+    Header: "Phone Number",
     accessor: "cell",
   },
 ];
