@@ -1,0 +1,21 @@
+.title {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.search-container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.table {
+  min-width: 600px;
+}
+
+.table i {
+  margin: 5px;
+}
+
+.table-wrapper {
+  overflow: scroll;
+}
