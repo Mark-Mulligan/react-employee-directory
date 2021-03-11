@@ -21,6 +21,7 @@ This site allows the user to look through a directory of employees.  The user is
   
 ## Installation
 ### View the Project Live <br>
+https://mark-mulligan.github.io/react-employee-directory/
 
 
 ### Run the Project Locally
@@ -58,7 +59,7 @@ npm start
 
 1.  Click the arrows next to the column you would like to sort by.  The first time you click, the column will be sorted ascending. The second time you click it will be sorted descending.  Click one more time or anywhere else to disable the sorting.  
 
-<img src="./readmeImages/columnExample" alt="Column Example" width="500px" height="250px">
+<img src="./readmeImages/columnExample.jpg" alt="Column Example" width="500px" height="250px">
 
 ## Questions
 [My Github](https://github.com/Mark-Mulligan) || mark.mulligan.jr1@gmail.com
